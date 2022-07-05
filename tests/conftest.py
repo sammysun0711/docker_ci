@@ -290,7 +290,7 @@ def install_omz_commands(request, bash, image_os, distribution, opencv_download_
             if 'ubuntu' in image_os:
                 install_dependencies = 'apt update && apt install -y git build-essential'
             elif 'rhel' in image_os:
-                install_dependencies = 'yum update -y && yum install -y git make'
+                install_dependencies = 'yum update -y && yum install -y git make opencv opencv-devel opencv-python'
 
             install_dev_wheel = install_openvino_dev_wheel('[caffe]') if distribution == 'runtime' else 'true'
 
